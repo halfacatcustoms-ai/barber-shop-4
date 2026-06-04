@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dulwich Barbers | Barry Road, London</title>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #181818;
+      color: white;
+    }
+
+    header {
+      min-height: 90vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+        url("https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 58px;
+      color: #d4af37;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #d4af37;
+      font-size: 34px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 28px;
+      background: #d4af37;
+      color: #111;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #d4af37;
+      border: 2px solid #d4af37;
+    }
+
+    .scroll-down {
+      display: inline-block;
+      margin-top: 45px;
+      color: #d4af37;
+      font-size: 18px;
+      text-decoration: none;
+      animation: bounce 2s infinite;
+    }
+
+    .scroll-arrow {
+      font-size: 34px;
+      display: block;
+      line-height: 1;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+
+      40% {
+        transform: translateY(10px);
+      }
+
+      60% {
+        transform: translateY(5px);
+      }
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #242424;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid #3a3a3a;
+      text-align: center;
+    }
+
+    .info-box {
+      background: #242424;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid #3a3a3a;
+    }
+
+    iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .review-marquee {
+      overflow: hidden;
+      white-space: nowrap;
+      background: #222;
+      padding: 22px 0;
+      border-top: 2px solid #d4af37;
+      border-bottom: 2px solid #d4af37;
+      margin-top: 30px;
+    }
+
+    .review-track {
+      display: inline-block;
+      animation: scrollReviews 45s linear infinite;
+    }
+
+    .review-item {
+      display: inline-block;
+      margin-right: 80px;
+      font-size: 18px;
+    }
+
+    .review-stars {
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    @keyframes scrollReviews {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    footer {
+      background: #0a0a0a;
+      text-align: center;
+      padding: 25px;
+      color: #aaa;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 40px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div>
+    <h1>Dulwich Barbers</h1>
+    <p>Traditional Barbering • Skin Fades • Beard Trims</p>
+
+    <a class="btn" href="tel:+447946351914">📞 Call Now</a>
+
+    <a class="btn btn-outline"
+       href="https://YOUR-SETMORE-LINK.setmore.com"
+       target="_blank">
+       📅 Book Appointment
+    </a>
+
+    <br>
+
+    <a href="#about" class="scroll-down">
+      <span class="scroll-arrow">⌄</span>
+      Scroll to learn more
+    </a>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p style="text-align:center;">
+    Dulwich Barbers is a local barber shop based on Barry Road in London.
+    We offer clean cuts, classic trims, sharp fades, beard shaping and friendly service.
+  </p>
+
+  <div class="cards">
+    <div class="card">✅ Apple Pay Accepted</div>
+    <div class="card">✅ Contactless Payments</div>
+    <div class="card">✅ Cash Accepted</div>
+  </div>
+</section>
+
+<section>
+  <h2>Opening Hours</h2>
+  <div class="info-box">
+    <p><strong>Monday:</strong> Closed</p>
+    <p><strong>Tuesday - Friday:</strong> 09:00 - 17:00</p>
+    <p><strong>Saturday:</strong> 08:00 - 16:00</p>
+    <p><strong>Sunday:</strong> Closed</p>
+  </div>
+</section>
+
+<section>
+  <h2>Customer Reviews</h2>
+
+  <div class="review-marquee">
+    <div class="review-track">
+      <span class="review-item"><span class="review-stars">★★★★★</span> “Best barber in Dulwich. Always a quality cut.”</span>
+      <span class="review-item"><span class="review-stars">★★★★★</span> “Friendly staff and great atmosphere.”</span>
+      <span class="review-item"><span class="review-stars">★★★★★</span> “Been coming here for years. Never disappointed.”</span>
+      <span class="review-item"><span class="review-stars">★★★★★</span> “Fantastic skin fade and beard trim.”</span>
+      <span class="review-item"><span class="review-stars">★★★★★</span> “Professional service every time.”</span>
+
+      <span class="review-item"><span class="review-stars">★★★★★</span> “Best barber in Dulwich. Always a quality cut.”</span>
+      <span class="review-item"><span class="review-stars">★★★★★</span> “Friendly staff and great atmosphere.”</span>
+      <span class="review-item"><span class="review-stars">★★★★★</span> “Been coming here for years. Never disappointed.”</span>
+      <span class="review-item"><span class="review-stars">★★★★★</span> “Fantastic skin fade and beard trim.”</span>
+      <span class="review-item"><span class="review-stars">★★★★★</span> “Professional service every time.”</span>
+    </div>
+  </div>
+
+  <p style="text-align:center; margin-top:30px;">
+    <a class="btn"
+       href="https://www.google.com/search?q=Dulwich+Barbers+12+Barry+Road+London+SE22+0JA+reviews"
+       target="_blank">
+       ⭐ Read Latest Google Reviews
+    </a>
+  </p>
+</section>
+
+<section>
+  <h2>Find Us</h2>
+  <div class="info-box">
+    <p><strong>Address:</strong> 12 Barry Road, London, SE22 0JA</p>
+    <p><strong>Phone:</strong> +44 7946 351914</p>
+
+    <a class="btn"
+       href="https://www.google.com/maps/search/?api=1&query=12+Barry+Road+London+SE22+0JA"
+       target="_blank">
+       Open in Google Maps
+    </a>
+
+    <a class="btn btn-outline"
+       href="https://www.facebook.com/barryroadbarbers"
+       target="_blank">
+       Facebook Page
+    </a>
+
+    <iframe
+      src="https://www.google.com/maps?q=12%20Barry%20Road%20London%20SE22%200JA&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Dulwich Barbers | Website by Half A Cut Customs</p>
+</footer>
+
+</body>
+</html>
